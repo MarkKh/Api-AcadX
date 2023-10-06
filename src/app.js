@@ -48,6 +48,6 @@ reporttypeRouter(app, connection);
 loanRouter(app, connection);
 
 // Start the server
-app.listen(process.env.PORT || port, () => {
+app.listen(process.env.PORT, () => {
   console.log(`Server is running on http://localhost:${port}`);
 });
