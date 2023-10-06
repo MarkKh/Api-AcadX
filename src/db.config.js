@@ -11,9 +11,10 @@ const dbConfig = {
   user: process.env.DB_USER,
   password: process.env.DB_PASSWORD,
   database: process.env.DB_DATABASE,
-  ssl: process.env.DB_SSL_CA ? {
-    ca: Buffer.from(process.env.DB_SSL_CA, "base64").toString("ascii"),
-  } : null,
+  ssl: {
+    ca: fs.readFileSync(caPath, 'utf8'),
+  },
+
 }
 
 module.exports = dbConfig;
