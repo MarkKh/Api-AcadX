@@ -18,11 +18,6 @@ app.use(cors());
 
 require('dotenv').config();
 
-// Check if DB_URL is defined in environment variables
-if (!process.env.DB_URL) {
-  console.error("DB_URL is not defined in environment variables.");
-  process.exit(1); // Exit the application with an error code
-}
 
 // Create a MySQL connection
 const connection = mysql.createConnection(dbConfig);
