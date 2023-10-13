@@ -15,6 +15,8 @@ const loanRouter = require('./routers/loanRouter');
 const app = express();
 const port = 25863;
 app.use(cors());
+app.use(fileUpload());
+
 
 require('dotenv').config();
 
